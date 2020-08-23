@@ -22,7 +22,6 @@ router.post('/register',  async (req, res) =>{
         const value = await schema.validateAsync(user);
     }
     catch (err) {
-        console.log('FERROU!');
         res.send(value);
     }
 
