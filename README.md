@@ -1,5 +1,5 @@
 <h1 align="center"> 
-  Authentication api with nodeJS 
+  Authentication api
 </h1>
 
 <h2 align="center">
