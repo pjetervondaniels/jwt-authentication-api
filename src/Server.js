@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const authRoute = require('./routes/Auth');
+const postRoute = require('./routes/Posts')
 const dotenv = require('dotenv');
 
 const app = express();
@@ -16,4 +17,6 @@ app.use(express.json());
 
 
 app.use('/api/user', authRoute);
+app.use('/api/posts', postRoute);
+
 app.listen(port, () => console.log(`this server is online in port ${port}!`));
