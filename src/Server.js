@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const authRoute = require('./routes/Auth');
-const postRoute = require('./routes/Posts')
+const route = require('./Routes');
 const dotenv = require('dotenv');
 
 const app = express();
@@ -16,7 +15,6 @@ mongoose.connect( DBconnect, { useNewUrlParser: true, useUnifiedTopology: true,}
 app.use(express.json());
 
 
-app.use('/api/user', authRoute);
-app.use('/api/posts', postRoute);
+app.use('/api/user', route);
 
 app.listen(port, () => console.log(`this server is online in port ${port}!`));
